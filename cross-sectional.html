@@ -4,108 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cross Sectional Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
     }
 
     :root {
-      --text: #20232a;
-      --muted: #656b73;
-      --line: #e2e4e6;
-      --accent: #bd4937;
-      --panel: #f0f1ef;
+      --panel: #ffffff;
+      --text: #1f2933;
+      --muted: #52606d;
+      --line: #f3c6dc;
+      --link: #a0005b;
     }
 
     body {
       margin: 0;
-      padding: 32px 18px;
-      background: #f7f7f5;
+      padding: clamp(24px, 6vw, 64px) 16px;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(255, 255, 255, 0.35), transparent 36%),
+        linear-gradient(135deg, #a0005b 0%, #d00079 48%, #f9a8d4 100%) fixed;
       color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.8;
     }
 
-    main {
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+    }
+
+    .page {
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
-      padding: clamp(24px, 6vw, 48px);
+      padding: clamp(26px, 6vw, 48px) clamp(22px, 5vw, 42px) 24px;
       border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 12px 36px rgba(32, 35, 42, 0.06);
+      border-radius: 22px;
+      background: var(--panel);
+      box-shadow: 0 24px 70px rgba(65, 0, 38, 0.2);
     }
 
     header {
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid #252a32;
+      margin-bottom: 26px;
     }
 
     h1 {
-      margin: 0;
-      color: #17283b;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      line-height: 1.4;
-      text-transform: uppercase;
+      margin: 0 0 12px;
+      color: var(--link);
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
     }
 
     .publication {
       margin: 5px 0 0;
       color: var(--muted);
-      font-family: "Courier New", Courier, monospace;
-      font-size: 0.8rem;
-      line-height: 1.5;
+      font-size: 0.94rem;
     }
 
-    main > p {
-      margin: 0 0 18px;
-      font-size: 1.06rem;
+    .article-copy p {
+      margin: 0 0 19px;
+      font-size: 1.05rem;
     }
 
     blockquote {
-      margin: 22px 0 0;
+      margin: 26px 0 0;
       padding: 16px 18px;
-      border-left: 4px solid var(--accent);
-      background: var(--panel);
+      border-left: 4px solid var(--link);
+      border-radius: 0 12px 12px 0;
+      background: #fff7fb;
     }
 
     .quote-label {
       margin: 0 0 6px;
-      color: var(--accent);
-      font-family: "Courier New", Courier, monospace;
-      font-size: 0.72rem;
+      color: var(--link);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.1em;
-      line-height: 1.5;
       text-transform: uppercase;
     }
 
     blockquote p {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.02rem;
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 1.65;
     }
 
     .home-link {
-      display: inline-block;
-      margin-top: 24px;
-      color: #8f3028;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
+      display: inline-flex;
+      margin-top: 14px;
+      padding: 9px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff7fb;
+      color: var(--link);
+      font-size: 0.98rem;
       font-weight: 700;
-      text-underline-offset: 3px;
+      text-decoration: none;
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .home-link:hover {
+      background: #fce7f3;
+      transform: translateY(-1px);
     }
 
     footer {
-      margin-top: 28px;
-      padding-top: 14px;
+      margin-top: 34px;
+      padding-top: 18px;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.78rem;
@@ -117,37 +131,47 @@
       margin: 0;
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
     @media (max-width: 480px) {
       body {
         padding: 14px 10px;
       }
 
-      main {
+      .page {
         padding: 24px 20px;
-        border-radius: 8px;
+        border-radius: 16px;
       }
 
-      main > p {
+      .article-copy p {
         font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <main>
+  <main class="page">
     <header>
       <h1>Cross Sectional Study</h1>
       <p class="publication">National health statistics center · published annually</p>
     </header>
 
-    <p>Each year since 2014, the center has conducted a national household survey on mental health. Every year a new random sample of roughly 27,000 adults is drawn; no one is deliberately surveyed twice, and the samples are independent from year to year. Each respondent completes the interview once, answering questions about symptoms in the past thirty days.</p>
+    <div class="article-copy">
+      <p>Each year since 2014, the center has conducted a national household survey on mental health. Every year a new random sample of roughly 27,000 adults is drawn; no one is deliberately surveyed twice, and the samples are independent from year to year. Each respondent completes the interview once, answering questions about symptoms in the past thirty days.</p>
 
-    <p>The share of adults aged 18 to 25 reporting frequent anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023. Over the same period, the share among adults aged 50 to 64 was roughly flat. The center publishes the figures with confidence intervals and notes that the survey mode shifted from in-person to a mix of phone and web interviewing in 2019.</p>
+      <p>The share of adults aged 18 to 25 reporting frequent anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023. Over the same period, the share among adults aged 50 to 64 was roughly flat. The center publishes the figures with confidence intervals and notes that the survey mode shifted from in-person to a mix of phone and web interviewing in 2019.</p>
 
-    <blockquote>
-      <p class="quote-label">What the authors concluded</p>
-      <p>“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened — a generation is becoming more anxious as it ages.”</p>
-    </blockquote>
+      <blockquote>
+        <p class="quote-label">What the authors concluded</p>
+        <p>“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened — a generation is becoming more anxious as it ages.”</p>
+      </blockquote>
+    </div>
 
     <p><a class="home-link" href="index.html">Home</a></p>
 
