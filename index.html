@@ -12,10 +12,10 @@
         }
 
         :root {
-            --green-dark: #0f5132;
-            --green-medium: #198754;
-            --green-light: #52b788;
-            --green-soft: #d8f3dc;
+            --pink-dark: #a0005b;
+            --fuchsia: #d00079;
+            --pink: #ec4899;
+            --pink-soft: #fce7f3;
             --white: #ffffff;
             --text: #1f2937;
             --gray: #6b7280;
@@ -26,7 +26,7 @@
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.7;
             color: var(--text);
-            background-color: #f8faf9;
+            background-color: #fff7fb;
         }
 
         .container {
@@ -36,7 +36,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #0f5132 0%, #198754 50%, #52b788 100%);
+            background: linear-gradient(135deg, var(--pink-dark) 0%, var(--fuchsia) 48%, #f9a8d4 100%);
             color: white;
             min-height: 100vh;
             padding: 60px 20px;
@@ -61,7 +61,7 @@
             padding: 12px 16px;
             border: 1px solid rgba(255, 255, 255, 0.65);
             border-radius: 8px;
-            background: rgba(15, 81, 50, 0.35);
+            background: rgba(160, 0, 91, 0.35);
             color: white;
             font: inherit;
             font-weight: 700;
@@ -70,7 +70,7 @@
 
         .menu-toggle:hover,
         .menu-toggle:focus-visible {
-            background: rgba(15, 81, 50, 0.7);
+            background: rgba(160, 0, 91, 0.7);
         }
 
         .menu-toggle:focus-visible,
@@ -128,13 +128,13 @@
             display: block;
             padding: 10px 12px;
             border-radius: 7px;
-            color: var(--green-dark);
+            color: var(--pink-dark);
             font-weight: 600;
             text-decoration: none;
         }
 
         .menu-dropdown a:hover {
-            background: var(--green-soft);
+            background: var(--pink-soft);
         }
 
         .menu-heading {
@@ -201,7 +201,7 @@
         .section-title {
             text-align: center;
             font-size: 2.2rem;
-            color: var(--green-dark);
+            color: var(--pink-dark);
             margin-bottom: 40px;
         }
 
@@ -229,15 +229,15 @@
             border-radius: 16px;
             text-align: center;
             box-shadow: var(--shadow);
-            border-top: 5px solid var(--green-medium);
+            border-top: 5px solid var(--fuchsia);
         }
 
         .skill-card h3 {
-            color: var(--green-dark);
+            color: var(--pink-dark);
         }
 
         .portfolio-section {
-            background: linear-gradient(to bottom, #f1fdf5, #ffffff);
+            background: linear-gradient(to bottom, #fce7f3, #fff7fb);
         }
 
         .portfolio-grid {
@@ -251,11 +251,11 @@
             border-radius: 16px;
             padding: 25px;
             box-shadow: var(--shadow);
-            border-left: 6px solid var(--green-medium);
+            border-left: 6px solid var(--fuchsia);
         }
 
         .portfolio-card h3 {
-            color: var(--green-dark);
+            color: var(--pink-dark);
             margin-bottom: 12px;
         }
 
@@ -264,7 +264,7 @@
         }
 
         .portfolio-card a {
-            color: var(--green-dark);
+            color: var(--pink-dark);
             text-decoration: none;
             font-weight: 600;
         }
@@ -274,7 +274,7 @@
         }
 
         .contact {
-            background: linear-gradient(135deg, #198754 0%, #52b788 100%);
+            background: linear-gradient(135deg, var(--fuchsia) 0%, #f9a8d4 100%);
             color: white;
             text-align: center;
         }
@@ -298,7 +298,7 @@
         }
 
         footer {
-            background: #0f5132;
+            background: var(--pink-dark);
             color: white;
             text-align: center;
             padding: 20px;
