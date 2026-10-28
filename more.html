@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About Serena | Public Health Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink-dark: #a0005b;
+            --fuchsia: #d00079;
+            --pink-soft: #fce7f3;
+            --text: #1f2937;
+            --gray: #6b7280;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #fff8fc 0%, #fff 52%, #fff7fb 100%);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.75;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 700;
+        }
+
+        a {
+            color: var(--pink-dark);
+        }
+
+        .hero {
+            padding: 30px 20px 46px;
+            background:
+                radial-gradient(ellipse at 82% 18%, rgba(255, 255, 255, 0.3), transparent 32%),
+                linear-gradient(135deg, #970052 0%, var(--fuchsia) 50%, #f4a6ce 100%);
+            color: white;
+        }
+
+        .hero-inner,
+        main {
+            width: min(90%, 1000px);
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            padding: 9px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-radius: 999px;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 160ms ease;
+        }
+
+        .back-link:hover {
+            background: rgba(94, 0, 50, 0.35);
+        }
+
+        .hero h1 {
+            margin-top: 40px;
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            line-height: 1.15;
+            letter-spacing: -0.035em;
+        }
+
+        .section-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 28px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .section-nav a {
+            display: block;
+            padding: 8px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            color: white;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 160ms ease;
+        }
+
+        .section-nav a:hover {
+            background: rgba(94, 0, 50, 0.35);
+        }
+
+        main {
+            padding: 18px 0 72px;
+        }
+
+        section {
+            padding: clamp(42px, 7vw, 68px) 0 12px;
+            scroll-margin-top: 20px;
+        }
+
+        .section-title {
+            margin-bottom: 28px;
+            color: var(--pink-dark);
+            font-size: clamp(1.9rem, 4vw, 2.5rem);
+            letter-spacing: -0.025em;
+        }
+
+        .section-title::after {
+            display: block;
+            width: 42px;
+            height: 3px;
+            margin-top: 12px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--fuchsia), #f9a8d4);
+            content: "";
+        }
+
+        .card,
+        .skill-card,
+        .portfolio-card {
+            border: 1px solid rgba(160, 0, 91, 0.08);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 12px 34px rgba(87, 14, 53, 0.07);
+        }
+
+        .card {
+            padding: clamp(24px, 5vw, 40px);
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+            font-size: 1.08rem;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-grid,
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .skill-card h3,
+        .portfolio-card h3 {
+            color: var(--pink-dark);
+            font-size: 1.2rem;
+        }
+
+        .portfolio-section {
+            margin: 12px -20px 0;
+            padding: 28px 20px 18px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(252, 231, 243, 0.7), rgba(255, 248, 252, 0.15));
+        }
+
+        .portfolio-card {
+            padding: 24px;
+            transition: transform 180ms ease, box-shadow 180ms ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 42px rgba(87, 14, 53, 0.12);
+        }
+
+        .portfolio-card p {
+            margin-top: 10px;
+            color: var(--gray);
+        }
+
+        .portfolio-card a {
+            font-weight: 700;
+            text-underline-offset: 4px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #a0005b 0%, var(--fuchsia) 58%, #e97db5 100%);
+            color: white;
+        }
+
+        .contact-card .section-title {
+            color: white;
+        }
+
+        .contact-card .section-title::after {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-card a {
+            color: white;
+            font-weight: 700;
+            text-underline-offset: 4px;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            padding: 22px 16px;
+            background: #790047;
+            color: white;
+            font-size: 0.92rem;
+            text-align: center;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 22px 0 34px;
+            }
+
+            .hero h1 {
+                margin-top: 32px;
+            }
+
+            .section-nav {
+                gap: 8px;
+            }
+
+            .section-nav a {
+                padding: 7px 11px;
+                font-size: 0.88rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-inner">
+            <a class="back-link" href="index.html">Home</a>
+            <h1>More About Me</h1>
+            <nav aria-label="More about Serena">
+                <ul class="section-nav">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills &amp; Strengths</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="card about-content">
+                <p>I am a Public Health student with a strong interest in the intersection of health and technology. I chose public health because of how broad and diverse the field is. It provides a way to improve health outcomes on a large scale while addressing real community challenges.</p>
+                <p>One area I care deeply about is disease prevention. I believe in the idea that prevention is better than a cure, a lesson that has influenced my perspective throughout my life and academic journey.</p>
+                <p>My career goal is to become either an Epidemiologist or a Public Health Data Analyst. I am especially interested in using data, research, and technology to support evidence-based public health solutions.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Skills &amp; Strengths</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><h3>Communication</h3></div>
+                <div class="skill-card"><h3>Research</h3></div>
+                <div class="skill-card"><h3>Critical Thinking</h3></div>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="portfolio">
+            <h2 class="section-title">PH 320 Portfolio — Applied Biostatistics in Public Health, York College CUNY</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <h3>Smoking and Mental Distress in NYC ZIP Codes</h3>
+                    <p><a href="smoking-mental-distress-nyc-zip-codes.html">View the analysis</a></p>
+                </div>
+                <div class="portfolio-card"><h3>Week 3</h3><p>Coming soon.</p></div>
+                <div class="portfolio-card"><h3>Week 4</h3><p>Coming soon.</p></div>
+                <div class="portfolio-card"><h3>Week 5</h3><p>Coming soon.</p></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="card contact-card">
+                <h2 class="section-title">Contact</h2>
+                <p>Email: <a href="mailto:rattrayserena1002@gmail.com">rattrayserena1002@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Serena Rattray. All rights reserved.</p>
+    </footer>
+</body>
+</html>
