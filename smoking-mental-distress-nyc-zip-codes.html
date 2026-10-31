@@ -1,141 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smoking and Mental Distress in NYC ZIP Codes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --panel: #ffffff;
-      --text: #1f2933;
-      --muted: #52606d;
-      --line: #f3c6dc;
-      --link: #a0005b;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background:
-        radial-gradient(ellipse at 15% 10%, rgba(255, 255, 255, 0.35), transparent 36%),
-        linear-gradient(135deg, #a0005b 0%, #d00079 48%, #f9a8d4 100%) fixed;
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.8;
-      padding: clamp(24px, 6vw, 64px) 16px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-weight: 700;
-    }
-
-    .page {
-      max-width: 700px;
-      margin: 0 auto;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: clamp(26px, 6vw, 48px) clamp(22px, 5vw, 42px) 24px;
-      box-shadow: 0 24px 70px rgba(65, 0, 38, 0.2);
-    }
-
-    h1 {
-      margin: 0 0 26px;
-      color: #a0005b;
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.15;
-      font-weight: 700;
-      text-align: left;
-      letter-spacing: -0.025em;
-    }
-
-    p {
-      margin: 0 0 19px;
-      font-size: 1.05rem;
-      color: var(--text);
-    }
-
-    .figure {
-      margin: 26px 0 30px;
-      text-align: center;
-      padding: 10px;
-      border: 1px solid #f8e1ed;
-      border-radius: 14px;
-      background: #fff9fc;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-      border: 0;
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: underline;
-    }
-
-    .home-link {
-      display: inline-flex;
-      margin-top: 14px;
-      padding: 9px 16px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fff7fb;
-      font-size: 0.98rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background-color 160ms ease, transform 160ms ease;
-    }
-
-    .home-link:hover {
-      background: #fce7f3;
-      transform: translateY(-1px);
-    }
-
-    footer {
-      margin-top: 34px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.78rem;
-      line-height: 1.6;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Serena Rattray's PH 320 regression analysis of smoking and mental distress across NYC ZIP codes.">
+<title>Smoking &amp; Mental Distress in NYC ZIP Codes | Serena Rattray</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.study-hero{padding:clamp(65px,9vw,112px) 0 76px;background:radial-gradient(circle at 88% 14%,#e9cfda,transparent 38%),linear-gradient(130deg,#f8edf1,#fffdfa)}
+.study-hero h1{max-width:960px;margin:16px 0 24px;font-size:clamp(2.9rem,6.6vw,5.7rem);letter-spacing:-.045em}
+.study-intro{max-width:720px;font-size:1.14rem;color:#625a62}
+.study-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:58px;align-items:start}
+.study-body h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:38px 0 16px}
+.study-body p{font-size:1.06rem;max-width:760px}
+.study-sidebar{position:sticky;top:24px;background:var(--blush);border-radius:18px;padding:24px}
+.study-sidebar a{display:block;margin-top:13px;font-weight:600;font-size:.9rem}
+.metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:28px 0 38px}
+.metric{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 20px;box-shadow:0 12px 35px #812e5309}
+.metric strong{display:block;font:600 clamp(2.1rem,4vw,3.2rem)/1.2 'Playfair Display',Georgia,serif;color:var(--berry)}
+.metric span{display:block;margin-top:9px;font-size:.85rem;color:#625a62;line-height:1.5}
+.figure-panel{background:white;border:1px solid var(--line);padding:clamp(16px,3vw,28px);border-radius:20px;box-shadow:0 18px 45px #812e530d;margin:25px 0 34px}
+.figure-panel img{display:block;width:100%;height:auto;object-fit:contain;border-radius:8px}
+.figure-panel figcaption{margin-top:15px;color:#625a62;font-size:.86rem}
+.insight{background:#f7eef2;border-left:4px solid var(--berry);padding:23px 28px;border-radius:0 16px 16px 0;margin:26px 0}
+.insight p{margin:0}
+.takeaway{background:var(--berry);color:white;border-radius:22px;padding:clamp(26px,5vw,42px);margin:35px 0}
+.takeaway h2{color:white;margin:8px 0 14px}.takeaway p{margin:0;font-size:1.13rem}
+.study-footer-links{border-top:1px solid var(--line);margin-top:40px;padding-top:25px}
+@media(max-width:800px){.study-layout{grid-template-columns:1fr}.study-sidebar{position:static;order:-1}.metric-grid{grid-template-columns:1fr}.study-hero{padding:60px 0}}
+</style>
 </head>
 <body>
-  <main class="page">
-    <h1>Smoking and Mental Distress in NYC ZIP Codes</h1>
-
-    <div class="figure">
-      <img src="table.png" alt="Regression output table">
-    </div>
-
-    <p>The data on the regression table shows that there is a positive correlation between smoking and mental distress with the r value equaling +0.77.</p>
-    <p>For every one percent of smoking there is a 0.49% increase in mental distress.</p>
-    <p>The p value was 0.000 indicating that the relationship is statistically significant.</p>
-
-    <p>This data indicates that higher smoking rates are associated with higher levels of mental distress among people within the study.</p>
-
-    <p><a href="index.html" class="home-link">Home</a></p>
-
-    <footer>
-      <small>Serena Rattray · PH 320 · Applied Biostatistics in Public Health</small>
-    </footer>
-  </main>
-</body>
-</html>
+<header><div class="wrap topbar"><a class="brand" href="index.html">SR <span aria-hidden="true">✦</span></a><nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Me</a><a href="skills.html">Skills &amp; Strengths</a><a href="works.html">My Works</a><a href="focus.html">My Focus</a><a href="research.html">Research &amp; Analysis</a><a href="more.html#contact">Contact</a></nav></div></header>
+<main>
+<section class="study-hero"><div class="wrap"><span class="eyebrow">PH 320 · Applied Biostatistics in Public Health</span><h1>Smoking &amp; Mental Distress in NYC ZIP Codes</h1><p class="study-intro">Exploring the relationship between smoking rates and reported mental distress through regression analysis.</p><span class="tag">Statistical analysis · NYC public health</span></div></section>
+<section class="content"><div class="wrap study-layout"><article class="study-body">
+<span class="eyebrow">Key findings</span><h2 id="findings">The numbers at a glance</h2>
+<p>The regression results show a positive association between smoking rates and mental distress across the ZIP codes included in the analysis.</p>
+<div class="metric-grid"><div class="metric"><strong>+0.77</strong><span>Correlation coefficient (r): a strong positive association</span></div><div class="metric"><strong>0.49</strong><span>Regression slope: a 1-percentage-point higher smoking rate corresponds to an estimated 0.49-percentage-point higher mental distress rate</span></div><div class="metric"><strong>&lt; 0.001</strong><span>Reported p-value of 0.000, conventionally written as p &lt; 0.001</span></div></div>
+<h2 id="regression">Regression output</h2>
+<p>The original regression table used for this analysis is shown below.</p>
+<figure class="figure-panel"><img src="table.png" alt="Regression output table showing the relationship between smoking and mental distress" loading="lazy"><figcaption>Regression output from the PH 320 smoking and mental distress analysis.</figcaption></figure>
+<h2 id="interpretation">What the results mean</h2>
+<p>The data show a positive correlation between smoking and mental distress, with an r value of +0.77. This indicates that ZIP codes with higher smoking rates also tend to have higher reported levels of mental distress.</p>
+<p>The regression slope of 0.49 means that a one-percentage-point increase in the smoking rate is associated with an estimated 0.49-percentage-point increase in the mental distress rate.</p>
+<p>The reported p-value of 0.000 indicates that the relationship is statistically significant; because p-values are not literally zero, this is more accurately presented as p &lt; 0.001.</p>
+<div class="insight"><p><strong>Important distinction:</strong> These findings describe an association across ZIP codes. They do not establish that smoking causes mental distress or that the same relationship necessarily holds for each individual.</p></div>
+<div class="takeaway" id="takeaway"><span class="eyebrow" style="color:#f4d8e4">Public health takeaway</span><h2>Higher smoking rates are associated with higher mental distress.</h2><p>Across the NYC ZIP codes studied, the analysis suggests a statistically significant positive relationship between the two measures. Additional research would be needed to investigate possible causes.</p></div>
+<div class="study-footer-links"><a class="button" href="works.html">← Back to My Works</a><a class="button alt" href="research.html">Research &amp; Analysis</a></div>
+</article><aside class="study-sidebar" aria-label="On this page"><span class="eyebrow">On this page</span><a href="#findings">Key findings</a><a href="#regression">Regression table</a><a href="#interpretation">Interpretation</a><a href="#takeaway">Public health takeaway</a></aside></div></section>
+</main>
+<footer><div class="wrap">© 2026 Serena Rattray · PH 320 · Applied Biostatistics in Public Health</div></footer>
+</body></html>
