@@ -9,84 +9,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 <style>
-:root{--ink:#4b2440;--berry:#a82e72;--rose:#e18ab7;--blush:#ffe0ef;--cream:#fff4f9;--line:#f2b8d4}
-body{background:linear-gradient(155deg,#fff0f7 0%,#ffd9eb 32%,#f7b8d7 68%,#e995c3 100%);color:var(--ink)}
-header{background:linear-gradient(90deg,#fff1f8,#ffd2e7,#f7b6d7);border-bottom:1px solid #f2b8d4}
-.nav a,.brand{color:#79214f}
-.study-hero{padding:clamp(65px,9vw,112px) 0 76px;background:radial-gradient(circle at 85% 20%,#fff0f8 0%,transparent 38%),linear-gradient(120deg,#ffeaf4 0%,#ffc8e1 52%,#ed9bc7 100%)}
-.study-hero h1{max-width:960px;margin:16px 0 24px;font-size:clamp(2.9rem,6.6vw,5.7rem);letter-spacing:-.045em;color:#6d1b48}
-.study-intro{max-width:720px;font-size:1.14rem;color:#643d56}
-.study-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:58px;align-items:start}
-.study-body h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:38px 0 16px;color:#772452}
-.study-body p{font-size:1.06rem;max-width:760px}
-.study-sidebar{position:sticky;top:24px;background:linear-gradient(145deg,#fff5fa,#f8c5df);border:1px solid #efb1d0;border-radius:18px;padding:24px;box-shadow:0 12px 28px #9d3a7320}
-.study-sidebar a{display:block;margin-top:13px;font-weight:600;font-size:.9rem;color:#852758}
-.metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:28px 0 38px}
-.metric{background:linear-gradient(155deg,#fff9fc,#ffe0ef 65%,#f6b9d9);border:1px solid #edafd0;border-radius:18px;padding:24px 20px;box-shadow:0 12px 35px #a82e7217}
-.metric:nth-child(2){background:linear-gradient(155deg,#fff1f8,#fbcbe3 65%,#efa5cb)}
-.metric:nth-child(3){background:linear-gradient(155deg,#ffe6f2,#f6b9d9 65%,#e895c1)}
-.metric strong{display:block;font:600 clamp(2.1rem,4vw,3.2rem)/1.2 'Playfair Display',Georgia,serif;color:#842553}
-.metric span{display:block;margin-top:9px;font-size:.85rem;color:#633e56;line-height:1.5}
-.figure-panel{background:linear-gradient(150deg,#fff9fc,#ffd9eb);border:1px solid #edafd0;padding:clamp(16px,3vw,28px);border-radius:20px;box-shadow:0 18px 45px #a82e721c;margin:25px 0 34px}
-.figure-panel img{display:block;width:100%;height:auto;object-fit:contain;border-radius:8px;background:white}
-.figure-panel figcaption{margin-top:15px;color:#643d56;font-size:.86rem}
-.insight{background:linear-gradient(110deg,#fff2f9,#f6b6d7);border-left:4px solid #a82e72;padding:23px 28px;border-radius:0 16px 16px 0;margin:26px 0}
-.insight p{margin:0}
-.takeaway{background:linear-gradient(125deg,#a82e72,#ce5796 52%,#e88cba);color:white;border-radius:22px;padding:clamp(26px,5vw,42px);margin:35px 0;box-shadow:0 22px 45px #a82e722b}
-.takeaway h2{color:white;margin:8px 0 14px}.takeaway p{margin:0;font-size:1.13rem}
-.study-footer-links{border-top:1px solid #d88fb4;margin-top:40px;padding-top:25px}
-.button{background:#a82e72}.button.alt{background:#fff2f9;border-color:#a82e72;color:#842553}
-footer{background:linear-gradient(90deg,#f9c7e0,#e99cc6);color:#633650}
-@media(max-width:800px){.study-layout{grid-template-columns:1fr}.study-sidebar{position:static;order:-1}.metric-grid{grid-template-columns:1fr}.study-hero{padding:60px 0}}
-</style>
-<style>
-/* Saturated pink-on-pink ombré refresh */
-:root{--ink:#59103e;--berry:#c31379;--rose:#f04da8;--blush:#ffb6df;--cream:#ffe1f2;--line:#ed85bd}
-body{background:linear-gradient(150deg,#ffd0e9 0%,#ff99cf 28%,#f75db1 62%,#e9339b 100%);color:#59103e}
-header{background:linear-gradient(90deg,#ffd0e9 0%,#ff8ac7 52%,#f34fa9 100%);border-color:#e96bad}
-.brand,.nav a{color:#651043}
-.study-hero{background:radial-gradient(circle at 78% 18%,#ffe0f1 0%,transparent 34%),linear-gradient(120deg,#ffc0e2 0%,#ff78c0 48%,#eb3b9e 100%)}
-.study-hero h1,.study-body h2{color:#66103f}
-.study-intro{color:#6c234d}
-.study-sidebar{background:linear-gradient(145deg,#ffe1f2,#ff9dd0 62%,#f46cb5);border-color:#e86dad}
-.study-sidebar a{color:#7d1650}
-.metric{background:linear-gradient(155deg,#ffe5f4,#ffa8d6 62%,#f66bb7);border-color:#ea77b5}
-.metric:nth-child(2){background:linear-gradient(155deg,#ffd5eb,#ff8ac9 60%,#ee4fa9)}
-.metric:nth-child(3){background:linear-gradient(155deg,#ffc0e0,#fa69b6 60%,#e83898)}
-.metric strong{color:#711045}.metric span{color:#5e2046}
-.figure-panel{background:linear-gradient(150deg,#ffdef0,#ff9cce 65%,#f66bb7);border-color:#e76cad}
-.insight{background:linear-gradient(110deg,#ffd7eb,#ff83c3 75%,#f45bac);border-color:#bc126f}
-.takeaway{background:linear-gradient(125deg,#a80864 0%,#d71a85 52%,#f052ab 100%);box-shadow:0 22px 45px #8d005c40}
-.button{background:#a80864}.button.alt{background:#ffd2ea;color:#751047;border-color:#aa126b}
-footer{background:linear-gradient(90deg,#ffadd7,#f46ab5,#db2d91);color:#58103d}
-</style><style>
-/* Deep, saturated pink gradient throughout the research page */
-:root{--ink:#520b35;--berry:#c00073;--rose:#ee2698;--blush:#f46cb6;--cream:#f88bc7;--line:#e14c9f}
-html{background:#df1688}
-body{background:linear-gradient(145deg,#f45ab0 0%,#e72896 28%,#d60b82 62%,#a90868 100%);background-attachment:fixed;color:#4c0a31}
-header{background:linear-gradient(95deg,#f448a9,#dc1287 58%,#ad096b);border-bottom:1px solid #b30a6c}
-.brand,.nav a{color:#fff4fa}.nav a:hover{color:#ffe0f0}
-.study-hero{background:radial-gradient(circle at 85% 12%,#ff7bc3 0%,transparent 35%),linear-gradient(115deg,#fa65b5 0%,#e52b98 48%,#bb0b74 100%)}
-.study-hero h1{color:#fff9fd;text-shadow:0 3px 18px #78004430}
-.study-hero .eyebrow,.study-hero .study-intro{color:#fff1f9}
-.study-hero .tag{background:#ffadd8;color:#711045}
-section.content{background:linear-gradient(155deg,#ef43a4 0%,#d80d85 55%,#ad086b 100%)}
-.study-body>h2,.study-body>.eyebrow,.study-body>p{color:#fff6fb}
-.study-sidebar{background:linear-gradient(145deg,#ff7bc2,#f03b9f 65%,#d71383);border:1px solid #ff9ed2;box-shadow:0 14px 35px #70004435}
-.study-sidebar .eyebrow,.study-sidebar a{color:#fff7fc}
-.metric{background:linear-gradient(155deg,#ff9bd1,#fa58b0 65%,#e82796);border:1px solid #ffb1dd;box-shadow:0 14px 30px #78004b30}
-.metric:nth-child(2){background:linear-gradient(155deg,#ff81c4,#ef329e 60%,#d30e83)}
-.metric:nth-child(3){background:linear-gradient(155deg,#f766b6,#e62193 60%,#b90a72)}
-.metric strong,.metric span{color:#fff9fd}
-.figure-panel{background:linear-gradient(145deg,#ff83c5,#ed3ca1 65%,#c7107c);border:1px solid #ffadd9;box-shadow:0 20px 40px #72004435}
-.figure-panel figcaption{color:#fff7fb}
-.insight{background:linear-gradient(110deg,#ff8ac9,#f145a7 65%,#dd188c);border-left:4px solid #790449;color:#fff9fd}
-.takeaway{background:linear-gradient(125deg,#97035c 0%,#b80973 45%,#e02a97 100%);border:1px solid #f36db7;box-shadow:0 22px 48px #6c004347}
-.study-footer-links{border-top:1px solid #ffa2d4}
-.button{background:#80004d;color:white;border:1px solid #ff9bd1}.button.alt{background:#ff80c4;color:#570a37;border:1px solid #ffd1e9}
-footer{background:linear-gradient(90deg,#b80972,#dd168b,#a50765);color:#fff2fa}
-@media(max-width:800px){.study-layout{grid-template-columns:1fr}.study-sidebar{position:static;order:-1}.metric-grid{grid-template-columns:1fr}}
+/* Harmonized light-pink-to-fuchsia gradient for this research page */
+html{background:#fff0f8}
+body{background:linear-gradient(145deg,#fff0f8 0%,#ffd4e9 38%,#f69bcf 72%,#cb258b 100%) fixed;color:#51243d}
+header{background:linear-gradient(95deg,#fff1f9,#ffc7e3 55%,#e964af);border-bottom:1px solid #efb6d4}
+.brand,.nav a{color:#78144f}
+.study-hero{background:radial-gradient(circle at 85% 15%,#fff5fa,transparent 38%),linear-gradient(120deg,#fff0f8,#ffc3e1 58%,#d83c9a)}
+.study-hero h1,.study-hero .eyebrow,.study-hero .study-intro{color:#641543}
+.study-hero .tag{background:#f7b7d9;color:#801452}
+section.content{background:linear-gradient(140deg,#fff4fa,#ffdbed 54%,#f4a2d0);color:#54213d}
+.study-body>h2,.study-body>.eyebrow,.study-body>p{color:#5e1b43}
+.study-sidebar{background:linear-gradient(145deg,#fff5fa,#f8bfdd 70%,#e67bb7);border:1px solid #edb9d4;box-shadow:0 14px 30px #a30a6b17}
+.study-sidebar .eyebrow,.study-sidebar a{color:#7b1852}
+.metric,.metric:nth-child(2),.metric:nth-child(3){background:linear-gradient(145deg,#fffafd,#ffe0f0 65%,#f5b5d9);border:1px solid #edb9d4;box-shadow:0 14px 30px #a30a6b13}
+.metric strong{color:#a10b6b}.metric span{color:#633b54}
+.figure-panel{background:linear-gradient(145deg,#fffafd,#ffd8eb);border:1px solid #edb9d4;box-shadow:0 18px 35px #a30a6b16}
+.figure-panel figcaption{color:#633b54}
+.insight{background:linear-gradient(110deg,#fff1f8,#f8c3df);border-left:4px solid #a10b6b;color:#54213d}
+.takeaway{background:linear-gradient(120deg,#bf2584,#d948a1 55%,#a10b6b);box-shadow:0 20px 45px #67003e25;color:white}
+.takeaway h2,.takeaway p{color:white}
+.study-footer-links{border-color:#edb9d4}
+.button{background:#a10b6b;color:white;border:1px solid #a10b6b}.button.alt{background:#ffe6f2;color:#801452;border:1px solid #bb418a}
+footer{background:linear-gradient(90deg,#ffe0ef,#f4a4d0,#d33d97);color:#642345}
 </style></head>
 <body>
 <header><div class="wrap topbar"><a class="brand" href="index.html">SR <span aria-hidden="true">✦</span></a><nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Me</a><a href="skills.html">Skills &amp; Strengths</a><a href="works.html">My Works</a><a href="focus.html">My Focus</a><a href="research.html">Research &amp; Analysis</a><a href="more.html#contact">Contact</a></nav></div></header>
