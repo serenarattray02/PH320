@@ -1,183 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cross Sectional Study</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    :root {
-      --panel: #ffffff;
-      --text: #1f2933;
-      --muted: #52606d;
-      --line: #f3c6dc;
-      --link: #a0005b;
-    }
-
-    body {
-      margin: 0;
-      padding: clamp(24px, 6vw, 64px) 16px;
-      background:
-        radial-gradient(ellipse at 15% 10%, rgba(255, 255, 255, 0.35), transparent 36%),
-        linear-gradient(135deg, #a0005b 0%, #d00079 48%, #f9a8d4 100%) fixed;
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.8;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-weight: 700;
-    }
-
-    .page {
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: clamp(26px, 6vw, 48px) clamp(22px, 5vw, 42px) 24px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: var(--panel);
-      box-shadow: 0 24px 70px rgba(65, 0, 38, 0.2);
-    }
-
-    header {
-      margin-bottom: 26px;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      color: var(--link);
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.15;
-      letter-spacing: -0.025em;
-    }
-
-    .publication {
-      margin: 5px 0 0;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .article-copy p {
-      margin: 0 0 19px;
-      font-size: 1.05rem;
-    }
-
-    blockquote {
-      margin: 26px 0 0;
-      padding: 16px 18px;
-      border-left: 4px solid var(--link);
-      border-radius: 0 12px 12px 0;
-      background: #fff7fb;
-    }
-
-    .quote-label {
-      margin: 0 0 6px;
-      color: var(--link);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    blockquote p {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.02rem;
-      font-weight: 600;
-      line-height: 1.65;
-    }
-
-    .home-link {
-      display: inline-flex;
-      margin-top: 14px;
-      padding: 9px 16px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fff7fb;
-      color: var(--link);
-      font-size: 0.98rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background-color 160ms ease, transform 160ms ease;
-    }
-
-    .home-link:hover {
-      background: #fce7f3;
-      transform: translateY(-1px);
-    }
-
-    footer {
-      margin-top: 34px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.78rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        transition-duration: 0.01ms !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 14px 10px;
-      }
-
-      .page {
-        padding: 24px 20px;
-        border-radius: 16px;
-      }
-
-      .article-copy p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A PH 320 analysis of repeated cross-sectional surveys and claims about anxiety among young adults.">
+<title>Cross-Sectional Study | Serena Rattray</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.article-hero{background:radial-gradient(circle at 90% 15%,#ead1dc,transparent 35%),linear-gradient(125deg,#f8edf1,#fffdfa);padding:clamp(65px,9vw,115px) 0 75px}
+.article-hero h1{font-size:clamp(3.1rem,7vw,5.8rem);letter-spacing:-.045em;max-width:900px;margin:16px 0 22px}
+.article-intro{max-width:720px;font-size:1.15rem;color:#625a62}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:65px;align-items:start}
+.article-body{max-width:780px}.article-body p{font-size:1.06rem;margin:0 0 23px}
+.article-body h2{font-size:clamp(1.65rem,3vw,2.3rem);margin:38px 0 16px}
+.article-sidebar{position:sticky;top:25px;background:#f5e9ed;border-radius:18px;padding:24px}
+.article-sidebar a{display:block;margin-top:14px;font-size:.9rem;font-weight:600}
+.pullquote{border-left:4px solid var(--berry);background:#f7eef2;padding:25px 28px;margin:30px 0;border-radius:0 16px 16px 0}
+.pullquote p{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.3rem,2.5vw,1.7rem);line-height:1.5;margin:10px 0 0}
+.takeaway{background:var(--berry);color:white;border-radius:22px;padding:clamp(26px,5vw,42px);margin:35px 0}
+.takeaway h2{color:white;margin-top:0}.takeaway p{font-size:1.13rem;margin-bottom:0}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:25px 0 32px}
+.stat{border:1px solid var(--line);border-radius:16px;padding:22px;background:white}
+.stat strong{display:block;color:var(--berry);font-family:'Playfair Display',Georgia,serif;font-size:2.5rem;line-height:1.2}
+.stat span{font-size:.85rem;color:#625a62}
+.article-foot{border-top:1px solid var(--line);padding-top:30px;margin-top:42px}
+@media(max-width:760px){.article-layout{grid-template-columns:1fr}.article-sidebar{position:static;order:-1}.stat-row{grid-template-columns:1fr 1fr}.article-hero{padding:60px 0}}
+</style>
 </head>
 <body>
-  <main class="page">
-    <header>
-      <h1>Cross Sectional Study</h1>
-      <p class="publication">National health statistics center · published annually</p>
-    </header>
-
-    <div class="article-copy">
-      <p>Each year since 2014, the center has conducted a national household survey on mental health. Every year a new random sample of roughly 27,000 adults is drawn; no one is deliberately surveyed twice, and the samples are independent from year to year. Each respondent completes the interview once, answering questions about symptoms in the past thirty days.</p>
-
-      <p>The share of adults aged 18 to 25 reporting frequent anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023. Over the same period, the share among adults aged 50 to 64 was roughly flat. The center publishes the figures with confidence intervals and notes that the survey mode shifted from in-person to a mix of phone and web interviewing in 2019.</p>
-
-      <blockquote>
-        <p class="quote-label">What the authors concluded</p>
-        <p>“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened — a generation is becoming more anxious as it ages.”</p>
-      </blockquote>
-    </div>
-
-    <p><a class="home-link" href="index.html">Home</a></p>
-
-    <footer>
-      <p>Serena Rattray · PH 320 · Applied Biostatistics in Public Health</p>
-    </footer>
-  </main>
-</body>
-</html>
+<header><div class="wrap topbar"><a class="brand" href="index.html">SR <span aria-hidden="true">✦</span></a><nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Me</a><a href="skills.html">Skills &amp; Strengths</a><a href="works.html">My Works</a><a href="focus.html">My Focus</a><a href="research.html">Research &amp; Analysis</a><a href="more.html#contact">Contact</a></nav></div></header>
+<main>
+<section class="article-hero"><div class="wrap"><span class="eyebrow">PH 320 · Applied Biostatistics in Public Health</span><h1>Cross-Sectional Study</h1><p class="article-intro">Understanding what repeated cross-sectional surveys can—and cannot—tell us about anxiety trends among young adults.</p><span class="tag">Research methods &amp; interpretation</span></div></section>
+<section class="content"><div class="wrap article-layout"><article class="article-body">
+<span class="eyebrow">Research interpretation</span><h2 id="claim">The researchers’ conclusion</h2>
+<div class="pullquote"><span class="eyebrow">Original claim</span><p>“As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened – a generation is becoming more anxious as it ages.”</p></div>
+<h2 id="method">How the survey was conducted</h2>
+<p>In the study, researchers conducted a national household survey on mental health from 2014 to 2023. Each year, they randomly selected a new sample of approximately 27,000 adults and deliberately ensured that participants were not surveyed more than once. As a result, the samples remained independent from year to year.</p>
+<div class="stat-row" aria-label="Reported anxiety symptom percentages"><div class="stat"><strong>8.1%</strong><span>Adults aged 18–25 reporting frequent anxiety symptoms in 2014</span></div><div class="stat"><strong>14.7%</strong><span>Adults aged 18–25 reporting frequent anxiety symptoms in 2023</span></div></div>
+<h2 id="limitations">Limitations of cross-sectional data</h2>
+<p>The researchers’ claim assumes that the same generation is becoming more anxious as its members grow older. However, the study does not follow the same individuals over time. It was specifically designed not to select the same person twice, so the people surveyed in 2014 were not necessarily the same people surveyed in 2023.</p>
+<p>This illustrates one of the limitations of cross-sectional data. It measures different people at particular points in time, allowing researchers to describe differences or similarities between groups and identify trends within a population over time. However, it cannot determine or measure changes within specific individuals because those individuals are not being followed.</p>
+<div class="takeaway" id="conclusion"><span class="eyebrow" style="color:#f4d8e4">A more accurate conclusion</span><h2>What the findings actually show</h2><p>“The percentage of adults aged 18–25 experiencing frequent anxiety symptoms increased from 8.1% in 2014 to 14.7% in 2023, indicating a population-level increase in reported anxiety symptoms.”</p></div>
+<p>This interpretation recognizes the trend without assuming that the same individuals experienced increasing anxiety as they aged.</p>
+<div class="article-foot"><a class="button" href="works.html">← Back to My Works</a><a class="button alt" href="research.html">Research &amp; Analysis</a></div>
+</article><aside class="article-sidebar" aria-label="On this page"><span class="eyebrow">On this page</span><a href="#claim">The researchers’ claim</a><a href="#method">Survey method</a><a href="#limitations">Study limitations</a><a href="#conclusion">More accurate conclusion</a></aside></div></section>
+</main><footer><div class="wrap">© 2026 Serena Rattray · PH 320 · Applied Biostatistics in Public Health</div></footer>
+</body></html>
