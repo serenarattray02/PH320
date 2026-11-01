@@ -33,3 +33,13 @@ section.content{color:#54213d}
 section.content h2,section.content .eyebrow,section.content .muted,section.content .prose{color:#5e1b43}
 .contact-band{background:linear-gradient(100deg,#f3a2ceaa,#e46badbb,#ca2e91d9)}
 footer{background:#b41c8030;border-top:1px solid #bd438b28}
+
+/* Final seamless ombré: one continuous canvas, no hard section edges */
+:root{--pink-flow:linear-gradient(160deg,#fff2f9 0%,#ffedf6 12%,#ffe3f1 25%,#ffd8eb 38%,#fbc8e3 51%,#f6b4d9 64%,#ef9bcf 77%,#e77fbe 88%,#d45aa8 100%)}
+html{background:#fff2f9}
+body{background:var(--pink-flow);background-attachment:fixed;min-height:100vh}
+header,.hero,.page-header,.article-hero,section.content,section.content.feature,footer{background:transparent!important}
+header{border-bottom:1px solid #9e316a12}
+footer{border-top:1px solid #9e316a12}
+.contact-band{background:linear-gradient(110deg,#f6b4d944,#e77fbe66,#d45aa899)!important}
+.card,.metric,.stat,.study-sidebar,.article-sidebar,.figure-panel,.pullquote,.insight{box-shadow:0 12px 32px #992c7110}
