@@ -20,3 +20,16 @@ section.content h2,section.content .eyebrow,section.content .muted,section.conte
 .contact-band{background:linear-gradient(115deg,#f4a6d1,#df4c9f 55%,#a90c70);color:#fff}
 .contact-band a{color:#fff}
 footer{background:linear-gradient(90deg,#ffe0ef,#f4a4d0,#d33d97);color:#642345}
+
+/* Seamless sitewide light blush to fuchsia transition */
+:root{--pink-flow:linear-gradient(155deg,#fff0f8 0%,#ffe4f1 20%,#ffd0e8 43%,#f8aed7 65%,#e66ab3 84%,#c92b90 100%)}
+html{background:#fff0f8}
+body{background:var(--pink-flow);background-attachment:fixed}
+header{background:transparent;border-bottom:1px solid #bd438b26}
+.hero,.page-header,.article-hero,section.content,section.content.feature{background:transparent}
+.hero,.page-header,.article-hero{color:#641543}
+.hero h1,.hero p,.hero .muted,.hero .eyebrow,.page-header h1,.page-header p,.page-header .eyebrow{color:#641543}
+section.content{color:#54213d}
+section.content h2,section.content .eyebrow,section.content .muted,section.content .prose{color:#5e1b43}
+.contact-band{background:linear-gradient(100deg,#f3a2ceaa,#e46badbb,#ca2e91d9)}
+footer{background:#b41c8030;border-top:1px solid #bd438b28}
