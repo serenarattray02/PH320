@@ -156,3 +156,19 @@ footer .wrap{border-top-color:#9e427322}
 @media(max-width:900px){.topbar{flex-wrap:wrap}.nav{row-gap:6px}.hero-grid{gap:32px}}
 @media(max-width:720px){.wrap{width:calc(100% - 36px)}.hero-grid{grid-template-columns:1fr}.nav{column-gap:17px}.card{padding:28px}.page-header{padding-top:75px}}
 @media(prefers-reduced-motion:reduce){.nav a::after{transition:none}}
+
+/* Delicate geometric accents and paper-like texture */
+body{position:relative;isolation:isolate}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 3px,#ffffff1c 4px),radial-gradient(circle at 1px 1px,#773b6413 .65px,transparent 1px);background-size:auto,9px 9px}
+.hero,.page-header{isolation:isolate;overflow:hidden}
+.hero::before,.page-header::before{content:"";position:absolute;z-index:-1;pointer-events:none;width:clamp(220px,30vw,450px);height:clamp(220px,30vw,450px);right:-8%;top:5%;border:1px solid #9f3f7b30;border-radius:50%;box-shadow:0 0 0 34px #ffffff10,0 0 0 35px #a5457930,0 0 0 80px #ffffff0b,0 0 0 81px #a545791c}
+.hero .wrap,.page-header .wrap{position:relative;z-index:1}
+.hero .monogram{position:relative}
+.hero .monogram::after{content:"";position:absolute;inset:-22px;border:1px dashed #a54b7b40;border-radius:50%;pointer-events:none}
+section.content{position:relative;isolation:isolate}
+section.content::before{content:"";position:absolute;z-index:-1;pointer-events:none;width:180px;height:180px;left:-105px;top:20%;border:1px solid #a04d7a24;border-radius:50%;box-shadow:0 0 0 28px #ffffff08,0 0 0 29px #a04d7a15}
+.card{overflow:hidden}
+.card::after{content:"";position:absolute;right:-42px;top:-42px;width:120px;height:120px;border:1px solid #9e48721c;border-radius:50%;pointer-events:none}
+.editorial-panel{position:relative}
+.editorial-panel::after{content:"✦";position:absolute;right:4px;top:18px;color:#a74c803f;font-size:1.5rem;line-height:1}
+@media(max-width:720px){.hero::before,.page-header::before{right:-170px;top:30px;opacity:.65}.hero .monogram::after{inset:-12px}.editorial-panel::after{font-size:1rem}}
