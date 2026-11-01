@@ -103,3 +103,24 @@ body{font-size:1rem;line-height:1.8}
 .metric span,.stat span,.figure-panel figcaption{font-size:.98rem}
 footer{font-size:.9rem}
 @media(max-width:720px){html{font-size:16px}.hero h1{font-size:clamp(3.15rem,11vw,4.8rem)}.nav a{font-size:.95rem}}
+
+/* Professional editorial structure: delicate rules and intentional hierarchy */
+.topbar{border-bottom:1px solid #8c356326}
+.hero,.page-header{position:relative}
+.hero::after,.page-header::after{content:"";position:absolute;bottom:0;left:6%;right:6%;height:1px;background:linear-gradient(90deg,transparent,#9e427348 18%,#9e427348 82%,transparent)}
+.section-head{padding-bottom:23px;border-bottom:1px solid #9e427338}
+section.content>.wrap>h2{padding-bottom:20px;border-bottom:1px solid #9e427338}
+.prose{max-width:850px}
+.prose p{margin-bottom:23px}
+.card{position:relative}
+.card::before{content:"";display:block;width:46px;height:1px;background:#ae5083a0;margin-bottom:22px}
+.card h3{margin-top:8px}
+.card a{display:inline-block;margin-top:8px}
+.editorial-rule{height:1px;border:0;background:linear-gradient(90deg,#98406d88,#98406d22,transparent);margin:34px 0}
+.editorial-intro{max-width:780px;font-size:1.13rem;line-height:1.9;color:#58364b}
+.editorial-kicker{font-size:.79rem;text-transform:uppercase;letter-spacing:.17em;font-weight:600;color:#87315f}
+.editorial-panel{margin:54px 0 10px;padding:32px 0 8px;border-top:1px solid #9e427344}
+.editorial-panel h2{font-size:clamp(1.8rem,3vw,2.55rem);margin:10px 0 18px}
+.editorial-panel p{max-width:800px;line-height:1.9}
+footer .wrap{border-top:1px solid #9e42732b;padding-top:18px}
+@media(max-width:720px){.topbar{border-bottom:1px solid #8c356326}.editorial-panel{margin-top:38px}.card::before{margin-bottom:16px}}
