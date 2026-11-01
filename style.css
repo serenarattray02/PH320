@@ -43,3 +43,42 @@ header{border-bottom:1px solid #9e316a12}
 footer{border-top:1px solid #9e316a12}
 .contact-band{background:linear-gradient(110deg,#f6b4d944,#e77fbe66,#d45aa899)!important}
 .card,.metric,.stat,.study-sidebar,.article-sidebar,.figure-panel,.pullquote,.insight{box-shadow:0 12px 32px #992c7110}
+
+/* Refined editorial finishing details — preserve continuous ombré */
+:root{--ink:#44283b;--berry:#8e285e;--line:#d89abf}
+body{font-weight:400;letter-spacing:.005em;line-height:1.82}
+h1,h2,h3{font-weight:500;letter-spacing:-.025em}
+.wrap{width:min(1080px,88%)}
+.topbar{padding-top:27px;padding-bottom:27px;gap:26px}
+.brand{font-size:1.55rem;letter-spacing:-.045em}
+.brand span{font-size:.7em;color:#b74388}
+.nav{column-gap:clamp(13px,1.7vw,25px);row-gap:10px}
+.nav a{font-size:.82rem;font-weight:500;letter-spacing:.025em;transition:color .2s ease}
+.nav a:hover{color:#a91672;text-decoration:none}
+.eyebrow{font-size:.69rem;font-weight:600;letter-spacing:.24em}
+.hero{padding-top:clamp(85px,11vw,155px);padding-bottom:clamp(95px,12vw,170px)}
+.hero-grid{gap:clamp(45px,7vw,100px)}
+.hero h1{font-size:clamp(3.6rem,7.7vw,6.8rem);font-weight:500;letter-spacing:-.065em;line-height:1.08}
+.hero p{line-height:1.9;max-width:580px}
+.hero .muted{font-size:.84rem;letter-spacing:.045em;margin-top:30px}
+.monogram{border-radius:50%;border:1px solid #fff9fbd9;background:linear-gradient(150deg,#fff8fc99,#f8c7e390 60%,#eaa3cc80);color:#8c2a61;box-shadow:0 24px 65px #8f336b16,inset 0 0 0 12px #fff7fc55;font-size:clamp(4.8rem,11vw,8.4rem);font-weight:500}
+.button{font-weight:600;font-size:.88rem;letter-spacing:.02em;padding:13px 26px;border-radius:999px;box-shadow:0 8px 20px #86235816;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.button:hover{transform:translateY(-2px);box-shadow:0 12px 24px #86235823}
+.button.alt{background:#fff8fbb5;box-shadow:none}
+section.content{padding-top:clamp(80px,9vw,118px);padding-bottom:clamp(80px,9vw,118px)}
+.section-head{margin-bottom:42px}
+.section-head h2{font-weight:500;letter-spacing:-.045em}
+.card{background:linear-gradient(150deg,#fffdfde8,#fff4faaf 75%,#ffe4f19c);border:1px solid #ffffffb5;border-radius:22px;padding:clamp(28px,3vw,40px);box-shadow:0 14px 40px #87345e10;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 44px #87345e1b}
+.card h3{font-weight:500;letter-spacing:-.035em}
+.card p,.prose p{line-height:1.9}
+.tag{background:#f6c9e1b0;color:#812957;font-size:.69rem;letter-spacing:.12em;padding:6px 13px}
+.page-header{padding-top:clamp(90px,10vw,130px);padding-bottom:clamp(65px,8vw,105px)}
+.page-header h1{font-weight:500;letter-spacing:-.055em}
+.contact-band{border-top:1px solid #ffffff5c;border-bottom:1px solid #ffffff5c}
+footer{font-size:.78rem;letter-spacing:.035em;padding:30px 0}
+.article-hero h1,.study-hero h1{font-weight:500;letter-spacing:-.055em}
+.article-sidebar,.study-sidebar{border-radius:20px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.stat,.metric,.figure-panel{border-radius:20px}
+@media(max-width:720px){.wrap{width:min(1100px,90%)}.topbar{padding:20px 0}.hero{padding:75px 0 90px}.hero h1{font-size:clamp(3.1rem,12vw,4.7rem)}.monogram{width:min(220px,65vw)}.card{padding:28px}}
+@media(prefers-reduced-motion:reduce){.button,.card,.nav a{transition:none}.button:hover,.card:hover{transform:none}}
