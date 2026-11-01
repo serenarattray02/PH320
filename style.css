@@ -82,3 +82,24 @@ footer{font-size:.78rem;letter-spacing:.035em;padding:30px 0}
 .stat,.metric,.figure-panel{border-radius:20px}
 @media(max-width:720px){.wrap{width:min(1100px,90%)}.topbar{padding:20px 0}.hero{padding:75px 0 90px}.hero h1{font-size:clamp(3.1rem,12vw,4.7rem)}.monogram{width:min(220px,65vw)}.card{padding:28px}}
 @media(prefers-reduced-motion:reduce){.button,.card,.nav a{transition:none}.button:hover,.card:hover{transform:none}}
+
+/* Larger, comfortably readable typography throughout the portfolio */
+html{font-size:18px}
+body{font-size:1rem;line-height:1.8}
+.nav a{font-size:.94rem}
+.brand{font-size:1.75rem}
+.eyebrow{font-size:.8rem}
+.hero h1{font-size:clamp(3.8rem,8vw,7.2rem)}
+.hero p,.page-header p,.article-intro,.study-intro{font-size:1.2rem}
+.hero .muted{font-size:.98rem}
+.page-header h1{font-size:clamp(3.2rem,7vw,5.5rem)}
+.section-head h2{font-size:clamp(2.2rem,4.2vw,3.6rem)}
+.card h3{font-size:1.8rem}
+.card p,.prose p,.article-body p,.study-body p{font-size:1.08rem}
+.card a,.button{font-size:1rem}
+.tag{font-size:.8rem}
+.article-sidebar a,.study-sidebar a{font-size:1rem}
+.article-body h2,.study-body h2{font-size:clamp(1.9rem,3vw,2.6rem)}
+.metric span,.stat span,.figure-panel figcaption{font-size:.98rem}
+footer{font-size:.9rem}
+@media(max-width:720px){html{font-size:16px}.hero h1{font-size:clamp(3.15rem,11vw,4.8rem)}.nav a{font-size:.95rem}}
