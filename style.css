@@ -172,3 +172,44 @@ section.content::before{content:"";position:absolute;z-index:-1;pointer-events:n
 .editorial-panel{position:relative}
 .editorial-panel::after{content:"✦";position:absolute;right:4px;top:18px;color:#a74c803f;font-size:1.5rem;line-height:1}
 @media(max-width:720px){.hero::before,.page-header::before{right:-170px;top:30px;opacity:.65}.hero .monogram::after{inset:-12px}.editorial-panel::after{font-size:1rem}}
+
+/* Academy-inspired editorial layout; content and section structure unchanged */
+:root{--editorial-rule:#693b5938}
+.wrap{width:min(1280px,calc(100% - 88px))}
+header{background:transparent!important}
+.topbar{padding:24px 0 22px;border-bottom:1px solid var(--editorial-rule);align-items:center}
+.brand{font-family:'DM Sans',Arial,sans-serif;font-size:1rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+.brand span{font-size:.85rem}
+.nav{gap:clamp(13px,1.5vw,24px)}
+.nav a{font-size:.79rem;font-weight:600;letter-spacing:.015em}
+.hero{padding:clamp(75px,9vw,140px) 0 clamp(90px,11vw,155px);min-height:min(780px,90vh);display:flex;align-items:center}
+.hero-grid{grid-template-columns:minmax(0,1.65fr) minmax(210px,.55fr);gap:clamp(35px,5vw,85px)}
+.hero h1{font-family:'DM Sans',Arial,sans-serif;font-weight:600;font-size:clamp(4.2rem,9vw,9rem);letter-spacing:-.09em;line-height:.98;max-width:1050px;margin:20px 0 38px}
+.hero p{font-size:1.1rem;max-width:690px;line-height:1.75}
+.hero .eyebrow{font-size:.78rem;letter-spacing:.23em}
+.hero .monogram{width:100%;max-width:330px;aspect-ratio:1;border-radius:0 50% 50% 50%;border:1px solid #9c467c60;box-shadow:none;background:linear-gradient(140deg,#fff9fc70,#e3a2cc55);font-family:'Playfair Display',Georgia,serif;font-size:clamp(4.5rem,8vw,8.5rem);transform:rotate(-7deg)}
+.hero .monogram::after{inset:18px;border:1px solid #9c467c44;border-radius:0 50% 50% 50%}
+.hero::before,.page-header::before{border-radius:50%;width:clamp(250px,34vw,520px);height:clamp(250px,34vw,520px);right:-15%;top:-20%;opacity:.42}
+.hero::after,.page-header::after{left:0;right:0;background:var(--editorial-rule)}
+.page-header{padding:clamp(85px,9vw,135px) 0 clamp(65px,7vw,105px)}
+.page-header h1{font-family:'DM Sans',Arial,sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:600;letter-spacing:-.075em;line-height:1.04}
+section.content{padding:clamp(75px,9vw,120px) 0}
+.section-head{display:grid;grid-template-columns:minmax(0,1fr);margin-bottom:34px;border-bottom:1px solid var(--editorial-rule);padding-bottom:25px}
+.section-head h2,section.content>.wrap>h2{font-size:clamp(2.5rem,4.8vw,4.3rem);line-height:1.12}
+.editorial-intro{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.45rem,2.5vw,2.2rem);line-height:1.55;max-width:1050px}
+.cards,.three{gap:0;border-top:1px solid var(--editorial-rule);border-left:1px solid var(--editorial-rule)}
+.card{border:0;border-right:1px solid var(--editorial-rule);border-bottom:1px solid var(--editorial-rule);border-radius:0;box-shadow:none!important;background:#fffafc3d;backdrop-filter:none;-webkit-backdrop-filter:none;padding:clamp(28px,3.5vw,48px);min-height:265px}
+.card:hover{transform:none;box-shadow:none!important;background:#fffafc83}
+.card::before{height:1px;width:42px;margin-bottom:28px}
+.card::after{width:125px;height:125px;right:-65px;top:-65px;opacity:.45}
+.card h3{font-size:clamp(1.55rem,2vw,2rem)}
+.card p{font-size:1.04rem}
+.tag{background:transparent;padding:0;border-radius:0;font-size:.75rem;letter-spacing:.16em}
+.button{border-radius:3px;padding:14px 23px;font-size:.9rem;letter-spacing:.02em}
+.button.alt{background:transparent}
+.editorial-panel{border-top:1px solid var(--editorial-rule);padding-top:45px}
+.editorial-panel h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,3.5vw,3.4rem)}
+footer{background:transparent!important}
+footer .wrap{border-top:1px solid var(--editorial-rule)}
+@media(max-width:900px){.wrap{width:calc(100% - 50px)}.hero{min-height:auto}.hero-grid{grid-template-columns:minmax(0,1.5fr) minmax(150px,.55fr)}.hero h1{font-size:clamp(3.8rem,9vw,6rem)}}
+@media(max-width:720px){.wrap{width:calc(100% - 36px)}.topbar{align-items:flex-start}.hero{padding:70px 0 90px}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(3.6rem,13vw,5.5rem)}.hero .monogram{max-width:180px;justify-self:end}.cards,.three{grid-template-columns:1fr}.card{min-height:auto}.page-header h1{font-size:clamp(3rem,11vw,4.8rem)}}
