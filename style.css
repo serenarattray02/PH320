@@ -279,3 +279,33 @@ section.content h2,section.content h3,section.content .eyebrow,section.content .
 footer{background:#2c102dc9!important;color:#fff8fc!important}
 footer .wrap{border-color:#ffffff48}
 @media(max-width:720px){.hero{min-height:68vh;padding-top:90px;padding-bottom:110px}.hero h1{font-size:clamp(3.1rem,11.5vw,5.2rem)}.hero p{font-size:1.06rem}.page-header{padding-top:95px;padding-bottom:105px}}
+
+/* Unified typography across every portfolio page */
+:root{--font-heading:'Playfair Display',Georgia,serif;--font-body:'DM Sans',Arial,sans-serif}
+body,button,input,textarea,select{font-family:var(--font-body)}
+h1,h2,h3,h4,h5,h6,.hero h1,.page-header h1,.article-hero h1,.study-hero h1,.section-head h2,.editorial-panel h2,.card h3,.contact-band h2,section.content>.wrap>h2{font-family:var(--font-heading)!important;font-weight:600;letter-spacing:-.035em}
+p,li,blockquote,.nav a,.eyebrow,.tag,.editorial-kicker,.button,.muted,.card p,.editorial-intro,.prose,.article-body,.study-body{font-family:var(--font-body)!important}
+body{font-size:1.05rem;line-height:1.8}
+p{line-height:1.85}
+.hero h1{letter-spacing:-.052em}
+.page-header h1{letter-spacing:-.045em}
+.card h3{line-height:1.24}
+.editorial-intro{font-size:1.16rem;line-height:1.85}
+/* Skills page: refined professional grid and consistent hierarchy */
+.skills-page .page-header{padding-bottom:clamp(105px,12vw,170px)}
+.skills-page .content .wrap{max-width:1200px}
+.skills-page .skills-heading{max-width:740px;margin-bottom:48px;padding-bottom:22px;border-bottom:1px solid #8e456b42}
+.skills-page .skills-heading h2{margin:0;font-size:clamp(2.35rem,4vw,3.8rem);line-height:1.15}
+.skills-page .skills-grid{margin:0;gap:0;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #985b7b45;border-left:1px solid #985b7b45}
+.skills-page .skills-grid .card{min-height:310px;padding:clamp(30px,3.2vw,48px);border:0!important;border-right:1px solid #985b7b45!important;border-bottom:1px solid #985b7b45!important;background:#fffdfa66!important}
+.skills-page .skills-grid .card::before{display:none}
+.skills-page .skills-grid .card::after{opacity:.23}
+.skills-page .skills-grid .tag{font-size:.8rem;color:#823c62;font-weight:700;margin-bottom:24px}
+.skills-page .skills-grid h3{font-size:clamp(1.75rem,2.4vw,2.25rem);margin:0 0 20px;color:#421f39!important}
+.skills-page .skills-grid p{font-size:1.06rem;line-height:1.85;margin:0;color:#51354a!important}
+.skills-page .editorial-panel{margin-top:75px;padding-top:45px}
+.skills-page .editorial-panel h2{font-size:clamp(2.2rem,3.5vw,3.4rem)}
+.skills-page .editorial-panel p{max-width:800px;font-size:1.1rem}
+.skills-page .skills-actions{margin-top:38px;display:flex;flex-wrap:wrap;gap:12px}
+.skills-page .skills-actions .button{margin:0}
+@media(max-width:900px){.skills-page .skills-grid{grid-template-columns:1fr}.skills-page .skills-grid .card{min-height:unset}.skills-page .skills-heading{margin-bottom:30px}}
