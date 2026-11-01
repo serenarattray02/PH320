@@ -310,6 +310,10 @@ p{line-height:1.85}
 .skills-page .skills-actions .button{margin:0}
 @media(max-width:900px){.skills-page .skills-grid{grid-template-columns:1fr}.skills-page .skills-grid .card{min-height:unset}.skills-page .skills-heading{margin-bottom:30px}}
 
-/* Skills & Strengths: refined underline beneath page title and name */
-.skills-page .page-header h1{display:table;padding-bottom:17px;margin-bottom:19px;border-bottom:2px solid #fff7f0}
-.skills-page .page-header .muted{display:table;padding-bottom:13px;border-bottom:1px solid #fff7f0a8}
+
+/* Match Skills & Strengths background layout to About Me */
+.skills-page .page-header{padding-bottom:clamp(115px,12vw,170px);background:transparent!important}
+.skills-page .page-header h1{display:block;padding:0;margin:10px 0;border:0!important}
+.skills-page .page-header .muted{display:block;padding:0;border:0!important}
+.skills-page section.content.feature{background:linear-gradient(180deg,#fff4f0f2 0%,#fff8f6f5 12%,#fff8f7f6 85%,#fff2f0f2 100%)!important;backdrop-filter:none;-webkit-backdrop-filter:none}
+.skills-page .page-header + section.content{margin-top:-1px}
